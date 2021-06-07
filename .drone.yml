@@ -6,7 +6,7 @@ steps:
 - name: test
   image: golang
   commands:
-    - go build -o bin/dnsname github.com/containers/dnsname/plugins/meta/dnsname
+    - GOARCH=386 go build -o bin/dnsname github.com/containers/dnsname/plugins/meta/dnsname
   
 - name: publish
   image: plugins/github-release
