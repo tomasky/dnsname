@@ -6,8 +6,7 @@ steps:
 - name: test
   image: golang
   commands:
-  - go test
-  - GO_BUILD=GO111MODULE=on $(GO) build -mod=vendor
+    - GO_BUILD=GO111MODULE=on $(GO) build -mod=vendor
   
 - name: publish
   image: plugins/github-release
