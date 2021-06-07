@@ -17,4 +17,4 @@ steps:
     overwrite: true  
     files: bin/dnsname
   when:
-    event: push
+    event: tag
