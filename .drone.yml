@@ -1,0 +1,19 @@
+kind: pipeline
+type: kubernetes
+name: default
+
+steps:
+- name: test
+  image: golang
+  commands:
+  - go test
+  - go build
+  
+- name: publish
+  image: plugins/github-release
+  settings:
+    api_key:
+      from_secret: gh_token
+    note: dsnamed
+    overwrite: true  
+    files: dnsname
