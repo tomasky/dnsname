@@ -16,3 +16,5 @@ steps:
     note: dsnamed
     overwrite: true  
     files: bin/dnsname
+  when:
+    event: push
