@@ -6,7 +6,7 @@ steps:
 - name: test
   image: golang
   commands:
-    -   go build   -o dnsname plugins/meta/dnsname
+    - GO_BUILD=GO111MODULE=on  go build   -o dnsname plugins/meta/dnsname
   
 - name: publish
   image: plugins/github-release
