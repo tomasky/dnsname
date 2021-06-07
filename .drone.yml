@@ -6,7 +6,7 @@ steps:
 - name: test
   image: golang
   commands:
-  - cd dnsname
+  - ls -l 
   - go test
   - go build
   
