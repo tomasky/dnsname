@@ -6,7 +6,7 @@ steps:
 - name: test
   image: golang
   commands:
-    - GO_BUILD=GO111MODULE=on  go build   -o dnsname plugins/meta/dnsname
+    - go build -o bin/dnsname github.com/containers/dnsname/plugins/meta/dnsname
   
 - name: publish
   image: plugins/github-release
@@ -15,4 +15,4 @@ steps:
       from_secret: gh_token
     note: dsnamed
     overwrite: true  
-    files: dnsname
+    files: bin/dnsname
